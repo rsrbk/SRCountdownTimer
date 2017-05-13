@@ -1,7 +1,7 @@
-SRCountdownTimer [https://cocoapod-badges.herokuapp.com/v/SRCountdownTimer/badge.png]
+SRCountdownTimer ![Pod status](hhttps://cocoapod-badges.herokuapp.com/v/SRCountdownTimer/badge.png)
 ---
 This is the simple circle countdown with a configurable timer
-
+![Demo](https://github.com/rsrbk/SRCountdownTimer/blob/master/demo.gif?raw=true)
 Installation
 ---
 The most preferable way to use this library is cocoapods. Add the following line to your `Podfile`:
