@@ -1,4 +1,4 @@
-SRCountdownTimer https://cocoapod-badges.herokuapp.com/v/SRCountdownTimer/badge.png
+SRCountdownTimer [https://cocoapod-badges.herokuapp.com/v/SRCountdownTimer/badge.png]
 ---
 This is the simple circle countdown with a configurable timer
 
