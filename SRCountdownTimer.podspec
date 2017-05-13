@@ -10,7 +10,7 @@ You can simply start your countdown, pause and resume in just one line of code. 
   s.homepage         = 'https://github.com/rsrbk/SRCountdownTimer'
   s.license          = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.author           = { 'Ruslan Serebriakov' => 'rsrbk1@gmail.com' }
-  s.source           = { :git => 'https://github.com/rsrbk/SRCountdownTimer', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/rsrbk/SRCountdownTimer.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '10.0'
   s.source_files = 'SRCountdownTimer/*.swift'
