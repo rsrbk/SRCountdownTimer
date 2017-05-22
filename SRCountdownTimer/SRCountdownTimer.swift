@@ -32,6 +32,7 @@ import UIKit
     @objc optional func timerDidStart()
     @objc optional func timerDidPause()
     @objc optional func timerDidResume()
+    @objc optional func timerDidEnd()
 }
 
 public class SRCountdownTimer: UIView {
@@ -148,8 +149,7 @@ public class SRCountdownTimer: UIView {
                     self.currentCounterValue = computedCounterValue
                 }
             } else {
-                self.currentCounterValue = 0
-                timer.invalidate()
+                self.end()
             }
         }
         RunLoop.main.add(timer!, forMode: .defaultRunLoopMode)
@@ -173,5 +173,15 @@ public class SRCountdownTimer: UIView {
         timer?.fireDate = Date()
 
         delegate?.timerDidResume?()
+    }
+    
+    /**
+     * End the timer
+     */
+    public func end() {
+        self.currentCounterValue = 0
+        timer?.invalidate()
+        
+        delegate?.timerDidEnd?()
     }
 }
