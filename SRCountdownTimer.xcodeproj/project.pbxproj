@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44EA95871ED6FB6E003D6ECF /* SRCountdownTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EA95861ED6FB6E003D6ECF /* SRCountdownTimerTests.swift */; };
 		44F730551EB61331000632D3 /* SRCountdownTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F7304B1EB61330000632D3 /* SRCountdownTimer.framework */; };
-		44F7305A1EB61331000632D3 /* SRCountdownTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F730591EB61331000632D3 /* SRCountdownTimerTests.swift */; };
 		44F730661EB613C9000632D3 /* SRCountdownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F730651EB613C9000632D3 /* SRCountdownTimer.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,10 +23,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44EA95861ED6FB6E003D6ECF /* SRCountdownTimerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRCountdownTimerTests.swift; sourceTree = "<group>"; };
 		44F7304B1EB61330000632D3 /* SRCountdownTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SRCountdownTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F7304F1EB61330000632D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44F730541EB61331000632D3 /* SRCountdownTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRCountdownTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		44F730591EB61331000632D3 /* SRCountdownTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRCountdownTimerTests.swift; sourceTree = "<group>"; };
 		44F7305B1EB61331000632D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44F730651EB613C9000632D3 /* SRCountdownTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRCountdownTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +80,7 @@
 		44F730581EB61331000632D3 /* SRCountdownTimerTests */ = {
 			isa = PBXGroup;
 			children = (
-				44F730591EB61331000632D3 /* SRCountdownTimerTests.swift */,
+				44EA95861ED6FB6E003D6ECF /* SRCountdownTimerTests.swift */,
 				44F7305B1EB61331000632D3 /* Info.plist */,
 			);
 			path = SRCountdownTimerTests;
@@ -154,6 +154,7 @@
 					44F730531EB61331000632D3 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 78L248PD54;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -206,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44F7305A1EB61331000632D3 /* SRCountdownTimerTests.swift in Sources */,
+				44EA95871ED6FB6E003D6ECF /* SRCountdownTimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,11 +368,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 78L248PD54;
 				INFOPLIST_FILE = SRCountdownTimerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rsrbk.SRCountdownTimerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -380,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 78L248PD54;
 				INFOPLIST_FILE = SRCountdownTimerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

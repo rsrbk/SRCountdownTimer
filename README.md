@@ -45,6 +45,16 @@ To resume(will start from the current state of view)
 public func resume()
 ```
 
+SRCountdownTimerDelegate
+--
+```swift
+@objc optional func timerDidUpdateCounterValue(newValue: Int)
+@objc optional func timerDidStart()
+@objc optional func timerDidPause()
+@objc optional func timerDidResume()
+@objc optional func timerDidEnd()
+```
+
 Shoutout
 --
 This was inspired by https://github.com/johngraham262/JWGCircleCounter
