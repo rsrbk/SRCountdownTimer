@@ -4,7 +4,6 @@ This is the simple circle countdown with a configurable timer
 <p align="center">
   <img src="https://github.com/rsrbk/SRCountdownTimer/blob/master/demo.gif?raw=true" alt="Demo gif"/>
 </p>
----
 
 Installation
 ---
