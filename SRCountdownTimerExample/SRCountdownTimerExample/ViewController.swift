@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         countdownTimer.labelFont = UIFont(name: "HelveticaNeue-Light", size: 50.0)
+        countdownTimer.labelTextColor = UIColor.red
         countdownTimer.timerFinishingText = "End"
         countdownTimer.lineWidth = 4
         countdownTimer.start(beginingValue: 10, interval: 1)

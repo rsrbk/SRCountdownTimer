@@ -39,6 +39,7 @@ public class SRCountdownTimer: UIView {
 
     public var isLabelHidden: Bool = false
     public var labelFont: UIFont?
+    public var labelTextColor: UIColor?
     public var timerFinishingText: String?
 
     public weak var delegate: SRCountdownTimerDelegate?
@@ -56,6 +57,9 @@ public class SRCountdownTimer: UIView {
         label.frame = self.bounds
         if let font = self.labelFont {
             label.font = font
+        }
+        if let color = self.labelTextColor {
+            label.textColor = color
         }
 
         return label
