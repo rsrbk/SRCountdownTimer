@@ -9,7 +9,7 @@ Installation
 ---
 The most preferable way to use this library is cocoapods. Add the following line to your `Podfile`:
 ```sh
-pod `SRCountdownTimer`
+pod 'SRCountdownTimer'
 ```
 and run `pod install` in your terminal.
 
