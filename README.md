@@ -55,6 +55,7 @@ SRCountdownTimerDelegate
 @objc optional func timerDidPause()
 @objc optional func timerDidResume()
 @objc optional func timerDidEnd()
+@objc optional func timerDidReset()
 ```
 
 Shoutout

@@ -30,6 +30,7 @@ import UIKit
     @objc optional func timerDidPause()
     @objc optional func timerDidResume()
     @objc optional func timerDidEnd()
+    @objc optional func timerDidReset()
 }
 
 public class SRCountdownTimer: UIView {
@@ -184,5 +185,18 @@ public class SRCountdownTimer: UIView {
         timer?.invalidate()
         
         delegate?.timerDidEnd?()
+    }
+    
+    /**
+     * Reset the timer to the initial state
+     */
+    public func reset() {
+        self.currentCounterValue = 0
+        self.elapsedTime = 0
+        self.setNeedsDisplay()
+        
+        timer?.invalidate()
+        
+        delegate?.timerDidReset?()
     }
 }
