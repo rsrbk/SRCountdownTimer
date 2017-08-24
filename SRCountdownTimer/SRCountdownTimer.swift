@@ -48,6 +48,9 @@ public class SRCountdownTimer: UIView {
     private var totalTime: TimeInterval = 1
     private var elapsedTime: TimeInterval = 0
     private let fireInterval: TimeInterval = 0.01 // ~60 FPS
+    
+    // use minutes and seconds for presentation
+    private var useMinutesAndSecondsRepresentation = false
 
     private lazy var counterLabel: UILabel = {
         let label = UILabel()
@@ -70,7 +73,11 @@ public class SRCountdownTimer: UIView {
                 if let text = timerFinishingText, currentCounterValue == 0 {
                     counterLabel.text = text
                 } else {
-                    counterLabel.text = "\(currentCounterValue)"
+                    if useMinutesAndSecondsRepresentation {
+                        counterLabel.text = getMinutesAndSeconds(remainingSeconds: currentCounterValue)
+                    } else {
+                        counterLabel.text = "\(currentCounterValue)"
+                    }
                 }
             }
 
@@ -184,5 +191,15 @@ public class SRCountdownTimer: UIView {
         timer?.invalidate()
         
         delegate?.timerDidEnd?()
+    }
+    
+    /**
+     * Calculate value in minutes and seconds and return it as String
+     */
+    private func getMinutesAndSeconds(remainingSeconds: Int) -> (String) {
+        let minutes = remainingSeconds / 60
+        let seconds = remainingSeconds - minutes * 60
+        let secondString = seconds < 10 ? "0" + seconds.description : seconds.description
+        return minutes.description + ":" + secondString
     }
 }
