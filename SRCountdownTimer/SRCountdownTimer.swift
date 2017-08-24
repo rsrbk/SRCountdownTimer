@@ -43,14 +43,14 @@ public class SRCountdownTimer: UIView {
     public var timerFinishingText: String?
 
     public weak var delegate: SRCountdownTimerDelegate?
+    
+    // use minutes and seconds for presentation
+    public var useMinutesAndSecondsRepresentation = false
 
     private var timer: Timer?
     private var totalTime: TimeInterval = 1
     private var elapsedTime: TimeInterval = 0
     private let fireInterval: TimeInterval = 0.01 // ~60 FPS
-    
-    // use minutes and seconds for presentation
-    private var useMinutesAndSecondsRepresentation = false
 
     private lazy var counterLabel: UILabel = {
         let label = UILabel()
