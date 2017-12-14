@@ -33,14 +33,14 @@ import UIKit
 }
 
 public class SRCountdownTimer: UIView {
-    public var lineWidth: CGFloat = 2.0
-    public var lineColor: UIColor = .black
-    public var trailLineColor: UIColor = UIColor.lightGray.withAlphaComponent(0.5)
-
-    public var isLabelHidden: Bool = false
-    public var labelFont: UIFont?
-    public var labelTextColor: UIColor?
-    public var timerFinishingText: String?
+    @IBInspectable public var lineWidth: CGFloat = 2.0
+    @IBInspectable public var lineColor: UIColor = .black
+    @IBInspectable public var trailLineColor: UIColor = UIColor.lightGray.withAlphaComponent(0.5)
+    
+    @IBInspectable public var isLabelHidden: Bool = false
+    @IBInspectable public var labelFont: UIFont?
+    @IBInspectable public var labelTextColor: UIColor?
+    @IBInspectable public var timerFinishingText: String?
 
     public weak var delegate: SRCountdownTimerDelegate?
     
