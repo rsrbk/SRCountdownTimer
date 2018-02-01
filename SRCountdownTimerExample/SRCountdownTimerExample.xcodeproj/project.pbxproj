@@ -351,6 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78L248PD54;
 				INFOPLIST_FILE = SRCountdownTimerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rsrbk.SRCountdownTimerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,6 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 78L248PD54;
 				INFOPLIST_FILE = SRCountdownTimerExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rsrbk.SRCountdownTimerExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
