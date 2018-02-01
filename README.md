@@ -57,6 +57,18 @@ SRCountdownTimerDelegate
 @objc optional func timerDidEnd()
 ```
 
+What's new in 1.1 version
+--
+- Added delegate call when a timer has finished
+- Added label text color customization
+- Added possibility to show minutes and seconds as the remaining time
+- Carthage Compatibility
+- IBInspectable attributes for the customization
+- iOS 9 support
+- Fixed a bug for the scrollview interaction
+
+Thanks [@nappannda](https://github.com/nappannda), [@nudaya](https://github.com/nudaya), [@Hamid1993](https://github.com/Hamid1993), [@SirWellington](https://github.com/SirWellington), [@samir105](https://github.com/samir105), [@resand](https://github.com/resand), [@rodmaz](https://github.com/rodmaz) for all your contribution and PRs!
+
 Shoutout
 --
 This was inspired by https://github.com/johngraham262/JWGCircleCounter
