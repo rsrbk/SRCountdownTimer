@@ -46,6 +46,7 @@ public class SRCountdownTimer: UIView {
     
     // use minutes and seconds for presentation
     public var useMinutesAndSecondsRepresentation = false
+    public var moveClockWise = true
 
     private var timer: Timer?
     private var beginingValue: Int = 1
@@ -108,8 +109,15 @@ public class SRCountdownTimer: UIView {
 
         let context = UIGraphicsGetCurrentContext()
         let radius = (rect.width - lineWidth) / 2
-        let currentAngle = CGFloat((.pi * 2 * elapsedTime) / totalTime)
-
+        
+        var currentAngle : CGFloat!
+        
+        if moveClockWise {
+            currentAngle = CGFloat((.pi * 2 * elapsedTime) / totalTime)
+        } else {
+            currentAngle = CGFloat(-(.pi * 2 * elapsedTime) / totalTime)
+        }
+    
         context?.setLineWidth(lineWidth)
 
         // Main line
