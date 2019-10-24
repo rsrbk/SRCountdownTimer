@@ -29,7 +29,7 @@ import UIKit
     @objc optional func timerDidStart(sender: SRCountdownTimer)
     @objc optional func timerDidPause(sender: SRCountdownTimer)
     @objc optional func timerDidResume(sender: SRCountdownTimer)
-    @objc optional func timerDidEnd(sender: SRCountdownTimer)
+    @objc optional func timerDidEnd(sender: SRCountdownTimer, elapsedTime: TimeInterval)
 }
 
 public class SRCountdownTimer: UIView {
@@ -191,7 +191,7 @@ public class SRCountdownTimer: UIView {
         self.currentCounterValue = 0
         timer?.invalidate()
         
-        delegate?.timerDidEnd?(sender: self)
+        delegate?.timerDidEnd?(sender: self, elapsedTime: elapsedTime)
     }
     
     /**
