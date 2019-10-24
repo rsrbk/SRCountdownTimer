@@ -190,6 +190,7 @@ public class SRCountdownTimer: UIView {
     public func reset() {
         self.currentCounterValue = 0
         timer?.invalidate()
+        self.elapsedTime = 0
         setNeedsDisplay()
     }
     
