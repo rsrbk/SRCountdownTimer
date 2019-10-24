@@ -208,7 +208,7 @@ public class SRCountdownTimer: UIView {
     @objc private func timerFired(_ timer: Timer) {
         elapsedTime += fireInterval
 
-        if elapsedTime < totalTime {
+        if elapsedTime <= totalTime {
             setNeedsDisplay()
 
             let computedCounterValue = beginingValue - Int(elapsedTime / interval)
