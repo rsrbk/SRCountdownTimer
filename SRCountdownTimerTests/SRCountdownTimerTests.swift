@@ -87,17 +87,21 @@ class SRCountdownTimerTests: XCTestCase {
 }
 
 extension SRCountdownTimerTests: SRCountdownTimerDelegate {
-    func timerDidEnd() {
-        expectationTimerDidStop?.fulfill()
-        timerDidStopFlag = true
+    func timerDidEnd(sender: SRCountdownTimer) {
+        if sender === timer {
+            expectationTimerDidStop?.fulfill()
+            timerDidStopFlag = true
+        }
     }
     
-    func timerDidUpdateCounterValue(newValue: Int) {
-        print (newValue)
-        updatedCounterValue.append(newValue)
-        
-        if newValue == 1 && expectationTimerDidUpdate != nil {
-            expectationTimerDidUpdate?.fulfill()
+    func timerDidUpdateCounterValue(sender: SRCountdownTimer, newValue: Int) {
+        if sender === timer {
+            print (newValue)
+            updatedCounterValue.append(newValue)
+            
+            if newValue == 1 && expectationTimerDidUpdate != nil {
+                expectationTimerDidUpdate?.fulfill()
+            }
         }
     }
 }
