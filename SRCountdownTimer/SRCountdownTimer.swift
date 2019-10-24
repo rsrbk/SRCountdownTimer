@@ -183,6 +183,16 @@ public class SRCountdownTimer: UIView {
 
         delegate?.timerDidResume?(sender: self)
     }
+
+    /**
+     * Reset the timer
+     */
+    public func reset() {
+        self.currentCounterValue = 0
+        timer?.invalidate()
+        self.elapsedTime = 0
+        setNeedsDisplay()
+    }
     
     /**
      * End the timer
