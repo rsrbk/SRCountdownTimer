@@ -79,6 +79,11 @@ public class SRCountdownTimer: UIView {
                     if useMinutesAndSecondsRepresentation {
                         counterLabel.text = getMinutesAndSeconds(remainingSeconds: currentCounterValue)
                     } else {
+                        // label and circle customization for the last ten seconds
+                        if currentCounterValue == 10 {
+                            lineColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+                            counterLabel.textColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+                        }
                         counterLabel.text = "\(currentCounterValue)"
                     }
                 }
