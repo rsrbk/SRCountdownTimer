@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SRCountdownTimer'
-  s.version          = '1.2'
+  s.version          = '1.3'
   s.summary          = 'This is the simple circle countdown with a configurable timer for iOS.'
  
   s.description      = <<-DESC
