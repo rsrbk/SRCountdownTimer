@@ -127,7 +127,7 @@ public class SRCountdownTimer: UIView {
             radius: radius,
             startAngle: currentAngle - .pi / 2,
             endAngle: .pi * 2 - .pi / 2,
-            clockwise: false)
+            clockwise: !moveClockWise)
         context?.setStrokeColor(lineColor.cgColor)
         context?.strokePath()
 
@@ -138,7 +138,7 @@ public class SRCountdownTimer: UIView {
             radius: radius,
             startAngle: -.pi / 2,
             endAngle: currentAngle - .pi / 2,
-            clockwise: false)
+            clockwise: !moveClockWise)
         context?.setStrokeColor(trailLineColor.cgColor)
         context?.strokePath()
     }
