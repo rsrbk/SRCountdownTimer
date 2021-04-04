@@ -57,16 +57,19 @@ public class SRCountdownTimer: UIView {
 
     private lazy var counterLabel: UILabel = {
         let label = UILabel()
-        self.addSubview(label)
-
+        label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.frame = self.bounds
+
         if let font = self.labelFont {
             label.font = font
         }
         if let color = self.labelTextColor {
             label.textColor = color
         }
+
+        self.addSubview(label)
+        NSLayoutConstraint.activate([label.centerXAnchor.constraint(equalTo: centerXAnchor),
+                                     label.centerYAnchor.constraint(equalTo: centerYAnchor)])
 
         return label
     }()
@@ -117,7 +120,7 @@ public class SRCountdownTimer: UIView {
         } else {
             currentAngle = CGFloat(-(.pi * 2 * elapsedTime) / totalTime)
         }
-    
+
         context?.setLineWidth(lineWidth)
 
         // Main line
